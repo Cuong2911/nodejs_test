@@ -5,7 +5,7 @@ import { log } from 'console';
 
 
 const app = express();
-const port = 1000;
+const port = 3000;
 
 app.use(express.static('./src/public/'));
 
