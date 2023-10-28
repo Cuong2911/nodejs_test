@@ -18,7 +18,6 @@ app.set('view engine', '.hbs');
 app.set('views', './src/resources/views');
 
 app.get('/', (req, res) => {
-  console.log('xin chao');
   res.render('home');
 });
 app.get('/news', (req, res) => {
