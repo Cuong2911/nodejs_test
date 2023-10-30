@@ -8,6 +8,8 @@ const app = express();
 const port = 3000;
 
 app.use(express.static('./src/public/'));
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 // Http logger
 app.use(morgan('combined'));
@@ -22,6 +24,18 @@ app.get('/', (req, res) => {
 });
 app.get('/news', (req, res) => {
   res.render('news');
+});
+app.get('/search', (req, res) => {
+  res.render('search');
+});
+app.get('/results', (req, res) => {
+  res.render('results');
+});
+app.get('/upload', (req, res) => {
+  res.render('upload');
+});
+app.post('/upload', (req, res) => {
+  res.send('');
 });
 
 app.listen(port, () => {
