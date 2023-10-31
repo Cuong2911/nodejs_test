@@ -1,7 +1,13 @@
+import Courses from "../models/Course.js";
+
+
 class SiteController {
     // [GET] /
-    index(req, res) {
-        res.render('home');
+    async index(req, res) {
+
+        const instance = await Courses.find({ });
+        console.log(instance);
+        res.json(instance);
     }
     // [GET] /:slug
     notFound(req, res) {

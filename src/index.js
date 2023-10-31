@@ -3,6 +3,10 @@ import morgan from 'morgan';
 import { engine } from 'express-handlebars';
 
 import { default as route } from './routes/index.js';
+import * as db from './config/db/index.js';
+
+
+db.connect();
 
 const app = express();
 const port = 3000;
