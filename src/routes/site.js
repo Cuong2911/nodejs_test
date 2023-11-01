@@ -3,10 +3,10 @@ import { default as siteController } from '../app/controllers/SiteController.js'
 
 const router = express.Router();
 
-router.use('/search', siteController.search);
-router.use('/results', siteController.results);
-router.use('/upload', siteController.upload);
-router.use('/:slug', siteController.notFound);
-router.use('/', siteController.index);
+router.get('/search', siteController.search);
+router.get('/results', siteController.results);
+router.get('/upload', siteController.upload);
+router.get('/:slug', siteController.notFound);
+router.get('/', siteController.index);
 
 export default router;
