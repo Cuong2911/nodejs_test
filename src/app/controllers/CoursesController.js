@@ -12,9 +12,15 @@ class CoursesController {
             )
             .catch(err => next(err));
     };
-    // [GET] /courses/:slug
-    show(req, res) {
-        res.send('courses slug');
+    // [GET] /courses/:slug  //course detail
+    course(req, res) {
+        Courses.findOne({ slug: req.params.slug})
+            .then(
+                course => {
+                    res.render('courseDetail', {course: singleMongooseToObj(course)});
+                }
+            )
+            .catch(err => next(err));
     };
 };
 

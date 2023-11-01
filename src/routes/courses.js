@@ -3,7 +3,7 @@ import { default as coursesController } from '../app/controllers/CoursesControll
 
 const router = express.Router();
 
-router.get('/:slug', coursesController.show);
+router.get('/:slug', coursesController.course);
 router.get('/', coursesController.index);
 
 export default router;
