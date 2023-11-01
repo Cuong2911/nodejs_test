@@ -1,0 +1,17 @@
+<div class="container text-center" style="height: 1000px;">
+    <h1>Courses page</h1>
+    <div class="row">
+        {{#each courses}}
+            <div class="col-lg-4">
+                <div class="card min-height-card">
+                    <img src={{this.image}} class="card-img-top" alt="...">
+                    <div class="card-body position-relative">
+                        <h5 class="card-title">{{this.name}}</h5>
+                        <p class="card-text">{{this.description}}</p>
+                        <a href="/courses/{{this.name}}" class="btn btn-primary mb-3 position-absolute center-bottom">Learn</a>
+                    </div>
+                </div>
+            </div>    
+        {{/each}}
+    </div>
+</div>
