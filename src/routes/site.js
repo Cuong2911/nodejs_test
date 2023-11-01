@@ -5,7 +5,6 @@ const router = express.Router();
 
 router.get('/search', siteController.search);
 router.get('/results', siteController.results);
-router.get('/upload', siteController.upload);
 router.get('/:slug', siteController.notFound);
 router.get('/', siteController.index);
 

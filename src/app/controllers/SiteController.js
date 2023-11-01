@@ -16,10 +16,6 @@ class SiteController {
     results(req, res) {
         res.render('results');
     };
-    // [GET] /upload
-    upload(req, res) {
-        res.render('upload');
-    };
 }
 
 export default new SiteController();

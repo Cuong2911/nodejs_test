@@ -3,6 +3,9 @@ import { default as coursesController } from '../app/controllers/CoursesControll
 
 const router = express.Router();
 
+
+router.get('/create', coursesController.create);
+router.post('/store', coursesController.store);
 router.get('/:slug', coursesController.course);
 router.get('/', coursesController.index);
 

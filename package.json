@@ -26,19 +26,13 @@
     },
     "homepage": "https://github.com/Cuong2911/nodejs_test#readme",
     "lint-staged": {
-        "'./**/*.{js,json,scss}'": "prettier --single-quote --trailing-comma all --tab-width 4 --write"
-    },
-    "husky": {
-        "hooks": {
-            "pre-commit": "npm test",
-            "pre-push": "npm test",
-            "...": "..."
-        }
+        "'.src/**/*.{js,json,scss}'": "prettier --single-quote --trailing-comma all --tab-width 4 --write"
     },
     "dependencies": {
         "express": "^4.18.2",
         "express-handlebars": "^7.1.2",
         "mongoose": "^7.6.4",
+        "mongoose-slug-generator": "^1.0.4",
         "node": "^20.9.0",
         "sass": "^1.69.5"
     },

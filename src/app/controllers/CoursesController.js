@@ -13,7 +13,7 @@ class CoursesController {
             .catch(err => next(err));
     };
     // [GET] /courses/:slug  //course detail
-    course(req, res) {
+    course(req, res, next) {
         Courses.findOne({ slug: req.params.slug})
             .then(
                 course => {
@@ -22,6 +22,19 @@ class CoursesController {
             )
             .catch(err => next(err));
     };
+    // [GET] /courses/create
+    create(req, res, next) {
+        res.render('courseCreate');
+    }
+    // [POST] /courses/store
+    store(req, res, next) {
+        const course = new Courses(req.body);
+        course.save()
+            .then(()=> res.redirect('/courses'))
+            .catch(err => next(err));
+
+    }
+
 };
 
 export default new CoursesController();
